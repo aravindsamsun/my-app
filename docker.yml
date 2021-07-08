@@ -3,10 +3,6 @@
   remote_user: ansadmin
   become: yes
   tasks:
-      - name: copy the war file 
-        copy:
-          src: ./*.war
-          dest: /opt/
       - name: stop container
         shell: docker stop demo
       - name: remove container
